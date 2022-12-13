@@ -5,27 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Visualizar manutenção</h1>
-    <label for="nome">Nome do proprietário</label>
-    <input type="text" name="nome" id="nome" value="{{ manutencao[1] }}" disabled>
-    <br>
-    <label for="placa">Placa do veículo</label>
-    <input type="text" name="placa" id="placa" value="{{ manutencao[2] }}" disabled>
-    <br>
-    <label for="data">Data da manutenção</label>
-    <input type="date" name="data" id="data" value="{{ manutencao[3] }}" disabled>
-    <br>
-    <label for="tipo">Tipo de manutenção</label>
-    <input type="text" name="tipo" id="tipo" value="{{ manutencao[4] }}" disabled>
-    <br>
-    <label for="valor">Valor da manutenção</label>
-    <input type="number" name="valor" id="valor" value="{{ manutencao[5] }}" disabled>
-    <br>
-    <label for="observacoes">Observações</label>
-    <textarea name="observacoes" id="observacoes" cols="30" rows="10" disabled>{{ manutencao[6] }}</textarea>
-    <br>
-    <button onclick="window.location.href='/manutencao/listar'">Fechar</button>
+    <h1 class="text-center">Visualizar manutenção</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="nome">Nome do proprietário</label>
+                    <input type="text" name="nome" id="nome" value="{{ manutencao[1] }}" disabled class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="placa">Placa do veículo</label>
+                    <input type="text" name="placa" id="placa" value="{{ manutencao[2] }}" disabled class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="data">Data da manutenção</label>
+                    <input type="date" name="data" id="data" value="{{ manutencao[3] }}" disabled class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo de manutenção</label>
+                    <input type="text" name="tipo" id="tipo" value="{{ manutencao[4] }}" disabled class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="valor">Valor da manutenção</label>
+                    <input type="number" name="valor" id="valor" value="{{ manutencao[5] }}" disabled class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="observacoes">Observações</label>
+                    <textarea name="observacoes" id="observacoes" cols="30" rows="10" disabled class="form-control">{{ manutencao[6] }}</textarea>
+                </div>
+                <button onclick="window.location.href='/manutencao/listar'" class="btn btn-primary">Fechar</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

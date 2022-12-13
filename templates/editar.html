@@ -5,31 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Editar manutenção</h1>
-    <form action="/manutencao/atualizar" method="POST">
-        <input type="hidden" name="id" value="{{ manutencao[0] }}">
-        <label for="nome">Nome do proprietário</label>
-        <input type="text" name="nome" id="nome" value="{{ manutencao[1] }}">
-        <br>
-        <label for="placa">Placa do veículo</label>
-        <input type="text" name="placa" id="placa" value="{{ manutencao[2] }}">
-        <br>
-        <label for="data">Data da manutenção</label>
-        <input type="date" name="data" id="data" value="{{ manutencao[3] }}">
-        <br>
-        <label for="tipo">Tipo de manutenção</label>
-        <input type="text" name="tipo" id="tipo" value="{{ manutencao[4] }}">
-        <br>
-        <label for="valor">Valor da manutenção</label>
-        <input type="number" name="valor" id="valor" value="{{ manutencao[5] }}">
-        <br>
-        <label for="observacoes">Observações</label>
-        <textarea name="observacoes" id="observacoes" cols="30" rows="10">{{ manutencao[6] }}</textarea>
-        <br>
-        <button type="submit">Salvar</button>
-        <button type="reset">Limpar</button>
-    </form>
+    <div class="container">
+        <h1>Editar manutenção</h1>
+        <form action="/manutencao/atualizar" method="POST">
+            <input type="hidden" name="id" value="{{ manutencao[0] }}">
+            <div class="form-group">
+                <label for="nome">Nome do proprietário</label>
+                <input type="text" name="nome" id="nome" class="form-control" value="{{ manutencao[1] }}">
+            </div>
+            <div class="form-group">
+                <label for="placa">Placa do veículo</label>
+                <input type="text" name="placa" id="placa" class="form-control" value="{{ manutencao[2] }}">
+            </div>
+            <div class="form-group">
+                <label for="data">Data da manutenção</label>
+                <input type="date" name="data" id="data" class="form-control" value="{{ manutencao[3] }}">
+            </div>
+            <div class="form-group">
+                <label for="tipo">Tipo de manutenção</label>
+                <input type="text" name="tipo" id="tipo" class="form-control" value="{{ manutencao[4] }}">
+            </div>
+            <div class="form-group">
+                <label for="valor">Valor da manutenção</label>
+                <input type="number" name="valor" id="valor" class="form-control" value="{{ manutencao[5] }}">
+            </div>
+            <div class="form-group">
+                <label for="observacoes">Observações</label>
+                <textarea name="observacoes" id="observacoes" cols="30" rows="10" class="form-control">{{ manutencao[6] }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <button type="reset" class="btn btn-secondary">Limpar</button>
+        </form>
+    </div>
 </body>
 </html>
