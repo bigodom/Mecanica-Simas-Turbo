@@ -36,7 +36,7 @@ def listar():
     manutencoes = cursor.fetchall()
     conn.close()
 
-    return render_template('listar.html', manutencoes=manutencoes)
+    return render_template('index.html', manutencoes=manutencoes)
 
 @app.route('/manutencao/excluir/<int:id>')
 def excluir(id):
